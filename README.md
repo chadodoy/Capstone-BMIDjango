@@ -1,3 +1,6 @@
-# Source code
+IT485 Capstone Project: BMI Calculator Newsletter App
+Members: Abin, Ali, Antonio, Armando and Henry
 
-For [Django authentication tutorial](https://wsvincent.com/django-user-authentication-tutorial-login-and-logout/) parts 1-3.
+Python 3.0 and Django 2.0 with SQLite database integration.
+
+Special thanks for Professor Simon Tran. You're the man!
