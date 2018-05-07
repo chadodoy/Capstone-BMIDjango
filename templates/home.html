@@ -1,0 +1,84 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+
+
+
+<link rel="stylesheet" href="{% static 'css/login.css' %}">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="{% static 'css/main.js' %}"></script>
+
+
+{% if user.is_authenticated %}
+  <h1 align="right" style="color:black">Hi {{ user.first_name }}!</h1>
+  <h1 style="color:black">{{ bmi_info.height }}</h1>
+  <h1 style="color:black">{{ bmi_info.weight }}</h1>
+  <h1 style="color:black">{{ bmi_info.bmi_info }}</h1>
+
+<style>
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 5px;
+}
+th {
+    text-align: left;
+}
+</style>
+
+<h2 align="right">Your BMI Information</h2>
+
+<style>
+table, th, td {
+    border: 3px solid black;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 5px;
+}
+th {
+    text-align: center;
+}
+</style>
+
+
+<table align="center">
+  <tr>
+    <th>Your Name</th>
+    <th>Previous BMI</th> 
+    <th>Other</th>
+  </tr>
+  <tr>
+    <td>test</td>
+    <td>test</td>
+    <td>test</td>
+  </tr>
+  <tr>
+    <td>test</td>
+    <td>test</td>
+    <td>test</td>
+  </tr>
+  <tr>
+    <td>test</td>
+    <td>test</td>
+    <td>test</td>
+  </tr>
+</table>
+
+
+  <p align="center" style="color:black"><a href="{% url 'logout' %}">logout</a></p>
+
+
+
+{% else %}
+
+  <p align="center" style="color:black">You are not logged in</p>
+ <p align="center" style="color:black">
+  <a href="{% url 'login' %}">login</a>
+ </p>
+  
+{% endif %}
+{% endblock %}
